@@ -1,0 +1,40 @@
+.SelectBUS_MAINCONTENT{
+    display:grid;
+    grid-template-columns: 20% 80%;
+}
+/* HEADER DARK FIX */
+.dark .Header,
+.dark .HeaderOne,
+.dark .HeaderTwo {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+}
+
+/* breadcrumb text */
+.dark .HeaderOne p {
+  color: #d1d5db !important;
+}
+.dark .HeaderTwo h3 {
+  color: #ffffff !important;
+}
+.dark .bus-list-header,
+.dark .bus-list-header span,
+.dark .bus-list-header p {
+  color: #e5e7eb !important;
+}
+.dark .filters,
+.dark .filters label,
+.dark .filters span,
+.dark .filters h4 {
+  color: #e5e7eb !important;
+}
+.dark hr {
+  border-color: #374151 !important;
+}
+
+.dark svg {
+  color: #e5e7eb !important;
+}
+.dark .cdk-overlay-container {
+  color-scheme: dark;
+}

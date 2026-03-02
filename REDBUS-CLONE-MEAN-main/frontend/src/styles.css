@@ -1,0 +1,168 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base */
+html, body {
+  height: 100%;
+}
+
+/* LIGHT THEME */
+body {
+  background: #ffffff;
+  color: #111;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 🌙 DARK MODE CORE */
+
+.dark body {
+  background-color: #0f172a;   /* main background */
+  color: #ffffff;
+}
+
+/* NAVBAR */
+.dark nav {
+  background: #0f172a !important;
+  color: white;
+}
+
+/* SECTION BACKGROUND */
+.dark .dark-section {
+  background-color: #111827;
+}
+
+/* CARDS & WHITE BOXES */
+.dark .bg-white {
+  background-color: #1f2937 !important;
+}
+
+/* FAQ cards */
+.dark .faq-card {
+  background: #1f2937 !important;
+  color: white !important;
+}
+
+/* TEXT */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark p,
+.dark span,
+.dark label,
+.dark a {
+  color: #e5e7eb !important;
+}
+
+/* INPUTS */
+.dark input,
+.dark select,
+.dark textarea {
+  background: #1f2937;
+  color: white;
+  border-color: #374151;
+}
+
+/* ICONS */
+.dark svg {
+  fill: currentColor !important;
+}
+
+/* MATERIAL MENU */
+.dark .mat-menu-panel,
+.dark .mat-mdc-menu-panel {
+  background: #1f2937 !important;
+  color: white !important;
+}
+
+/* AUTOCOMPLETE DROPDOWN */
+.dark .mat-mdc-autocomplete-panel {
+  background: #1f2937 !important;
+  color: white !important;
+}
+
+/* DATEPICKER */
+.dark .mat-datepicker-content {
+  background: #1f2937 !important;
+  color: white !important;
+}
+
+.dark .mat-calendar-body-selected {
+  background-color: #6366f1 !important;
+  color: white !important;
+}
+
+/* Overlay container fix */
+.dark .cdk-overlay-container {
+  color-scheme: dark;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+/* HEADER STRIP */
+.HeaderOne {
+  background: #0b1a33;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* breadcrumb text */
+/* HEADER STRIP */
+.HeaderOne {
+  background: #0b1a33;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* breadcrumb text */
+/* DARK BACKGROUND SECTIONS */
+
+.dark .Header {
+  background-color: #1e293b !important;
+}
+
+.dark .HeaderOne {
+  background-color: #111827 !important;
+}
+
+.dark .HeaderTwo {
+  background-color: #1e293b !important;
+}
+/* improve text visibility in dark sections */
+.dark .text-gray-500 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-gray-600 {
+  color: #e2e8f0 !important;
+}
+
+/* DARK MODE TEXT VISIBILITY FIX */
+
+.dark .Header,
+.dark .HeaderOne,
+.dark .HeaderTwo,
+.dark h3,
+.dark p,
+.dark span {
+  color: #ffffff !important;
+}
+
+/* filters + headings */
+.dark .filters,
+.dark .filter-title,
+.dark .sort-bar,
+.dark .bus-header {
+  color: #e5e7eb !important;
+}
+.dark .bus-header,
+.dark .sort-bar,
+.dark .bus-list-header {
+  background: #0f172a !important;
+  color: white !important;
+}

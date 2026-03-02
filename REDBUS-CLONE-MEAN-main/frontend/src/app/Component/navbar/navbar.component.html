@@ -1,0 +1,107 @@
+<nav class="px-4 md:px-14 py-3 flex items-center justify-between sticky top-0 z-20 shadow bg-white dark:bg-gray-900 dark:text-white">
+
+  <!-- LEFT SIDE -->
+  <div class="flex items-center gap-10">
+
+    <!-- LOGO -->
+    <img class="w-12 md:w-16"
+         src="../../../assets/red-bus-with-word-bus-it_600323-482.avif"
+         alt="Tedbus Logo">
+
+    <!-- MENU -->
+    <div class="flex gap-6">
+
+      <div class="flex flex-col items-center cursor-pointer hover:text-red-500">
+        🚌
+        <span class="text-sm">Bus Tickets</span>
+      </div>
+
+      <div class="flex flex-col items-center cursor-pointer hover:text-red-500">
+        🚕
+        <span class="text-sm">Cab Rental</span>
+      </div>
+
+      <div class="flex flex-col items-center cursor-pointer hover:text-red-500">
+        🚆
+        <span class="text-sm">Train Tickets</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="flex items-center gap-6">
+
+    <!-- DARK MODE -->
+    <button (click)="toggleDarkMode()"
+            class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">
+      🌙
+    </button>
+
+    <!-- 🔔 NOTIFICATION -->
+    <div class="relative">
+
+      <!-- Bell -->
+      <button (click)="toggleNotifications()" class="text-2xl relative">
+        🔔
+        <span *ngIf="notifications.length > 0"
+              class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 rounded-full">
+          {{ notifications.length }}
+        </span>
+      </button>
+
+      <!-- Dropdown -->
+      <div *ngIf="showNotifications"
+           class="absolute right-0 mt-3 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-lg p-3 z-50">
+
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-semibold text-gray-700 dark:text-white">
+            Notifications
+          </p>
+
+          <button *ngIf="notifications.length > 0"
+                  (click)="clearNotifications()"
+                  class="text-xs text-blue-500 hover:text-blue-700">
+            Clear
+          </button>
+        </div>
+
+        <div *ngIf="notifications.length === 0"
+             class="text-gray-500 text-sm">
+          No notifications
+        </div>
+
+        <div *ngFor="let note of notifications"
+             class="text-sm border-b last:border-none py-2 px-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+          {{ note }}
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GOOGLE LOGIN -->
+    <div id="google-btn" *ngIf="!isloggedIn"></div>
+
+    <!-- HELP -->
+    <div *ngIf="isloggedIn" class="flex items-center gap-4">
+
+      <div class="cursor-pointer hover:text-red-500">
+        🎧 Help
+      </div>
+
+      <!-- ACCOUNT MENU -->
+      <button [matMenuTriggerFor]="menu" class="hover:text-red-500">
+        👤 Account
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>My Trips</button>
+        <button mat-menu-item>Wallet</button>
+        <button mat-menu-item (click)="navigate('/profile')">My Profile</button>
+        <button mat-menu-item (click)="handlelogout()">Sign Out</button>
+      </mat-menu>
+
+    </div>
+
+  </div>
+</nav>

@@ -9,6 +9,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ✅ Root route (Important)
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "RedBus Clone Backend is running successfully 🚀",
+    status: "OK"
+  });
+});
+
 // API routes
 app.use("/review", reviewRoutes);
 

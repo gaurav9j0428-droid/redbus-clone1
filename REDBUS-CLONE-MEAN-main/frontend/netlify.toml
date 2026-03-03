@@ -1,8 +1,0 @@
-[build]
-  command = "cd REDBUS-CLONE-MEAN-main/frontend && npm install && npm run build"
-  publish = "REDBUS-CLONE-MEAN-main/frontend/dist/frontend"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200

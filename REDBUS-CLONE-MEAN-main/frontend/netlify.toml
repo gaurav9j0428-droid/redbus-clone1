@@ -1,6 +1,6 @@
 [build]
-  publish = "dist/frontend"
-  command = "npm run build"
+  command = "cd REDBUS-CLONE-MEAN-main/frontend && npm install && npm run build"
+  publish = "REDBUS-CLONE-MEAN-main/frontend/dist/frontend"
 
 [[redirects]]
   from = "/*"

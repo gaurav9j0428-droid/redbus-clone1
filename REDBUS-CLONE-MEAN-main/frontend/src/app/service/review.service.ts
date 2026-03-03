@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ReviewService {
 
-  private apiUrl = 'http://localhost:5000/review';
+ private apiUrl = "https://redbus-clone1.onrender.com/review";
 
   constructor(private http: HttpClient) {}
 
@@ -17,5 +17,6 @@ export class ReviewService {
 
   addReview(reviewData: any): Observable<any> {
     return this.http.post(this.apiUrl, reviewData);
+    
   }
 }
